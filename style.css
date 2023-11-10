@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+:root {
+    --black-clr: rgb(56, 50, 50);
+    --white-clr: rgb(232, 219, 219);
+    --inner-circle-bg: #454545;
+    --top-left-bg: #93B7BE;
+    --top-right-bg: #F1FFFA;
+    --bottom-left-bg: #D5C7BC;
+    --bottom-right-bg: #785964;
+    --border-clr: rgb(31, 29, 29);
+}
+
+html {
+    line-height: 1.15;
+    font-size: 62.5%;
+    background-color: var(--black-clr);
+    font-family: 'Fjalla One', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.outer-circle {
+    height: 600px;
+    aspect-ratio: 1/1;
+    background-color: var(--gold-clr);
+
+    border-radius: 100%;
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inner-circle {
+    height: 400px;
+    aspect-ratio: 1/1;
+    background-color: var(--inner-circle-bg);
+    border: 3px solid var(--border-clr);
+    border-radius: 100%;
+    position: absolute;
+    inset: 50%;
+    translate: -50% -50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.quarter {
+    height: 300px;
+    aspect-ratio: 1/1;
+    border: 2px solid var(--border-clr);
+
+    transition: all .2s ease-in-out;
+}
+
+#topleft {
+    background-color: var(--top-left-bg);
+    border-radius: 100% 0 0 0;
+}
+
+#topright {
+    background-color: var(--top-right-bg);
+    border-radius: 0 100% 0 0;
+}
+
+#bottomleft {
+    background-color: var(--bottom-left-bg);
+    border-radius: 0 0 0 100%;
+}
+
+#bottomright {
+    background-color: var(--bottom-right-bg);
+    border-radius: 0 0 100% 0;
+}
+
+
+
+.title {
+    font-size: 7rem;
+    margin-bottom: 0;
+}
+
+.buttons {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-block: 3.5rem;
+}
+
+.start-button {
+    font-size: 2.5rem;
+    background-color: var(--white-clr);
+    padding: 1rem 1.5rem;
+    border-radius: 70%;
+}
+
+.start-button:hover {
+    cursor: pointer;
+}
+
+.check-btn {
+    font-size: 2rem;
+}
+
+.count {
+    font-size: 2.2rem;
+}
+
+.count-display {
+    height: 50px;
+    aspect-ratio: 1/1;
+    background-color: var(--black-clr);
+    margin-bottom: .5rem;
+    font-size: 3rem;
+    color: var(--white-clr);
+
+    display: grid;
+    place-items: center;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+    <link rel="icon" href="data:,">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- js -->
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+
+    <div class="outer-circle">
+        <div id="topleft" class="quarter"></div>
+        <div id="topright" class="quarter"></div>
+        <div id="bottomleft" class="quarter"></div>
+        <div id="bottomright" class="quarter"></div>
+        <div class="inner-circle">
+            <h2 class="title">SIMON!</h2>
+            <div class="buttons">
+
+                <div class="power-button check-btn">
+                    <input type="checkbox" id="power" name="power"></input>
+                    <label for="power">Power</label>
+                </div>
+                <div class="start-button">Start</div>
+                <div class="strict-button check-btn">
+                    <input type="checkbox" id="strict" name="strict"></input>
+                    <label for="power">Strict</label>
+                </div>
+
+            </div>
+            <div class="count">
+                <div class="count-display color">0</div>
+                <span class="count-title">COUNT</span>
+            </div>
+        </div>
+    </div>
+
+
+    <audio class="audio-files">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" type="audio/mpeg">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" type="audio/mpeg" />
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" type="audio/mpeg" />
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" type="audio/mpeg" />
+    </audio>
+</body>
+
+</html>
